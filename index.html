@@ -1,717 +1,611 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Integrated Services | Cabling • Security • Handyman</title>
-  <meta name="description" content="Integrated Services provides structured cabling, security camera installation, TV mounting, network setup, and handyman services. Request a quote or book service online." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Open Graph (Facebook) -->
-  <meta property="og:title" content="Integrated Services" />
-  <meta property="og:description" content="Cabling • Security • Handyman — Request a quote or book service online." />
-  <meta property="og:type" content="website" />
-  <!-- Replace with your domain + social preview image when you have it -->
-  <meta property="og:image" content="/og-image.png" />
+<title>Integrated Services | Phoenix Smart Home & Handyman Services</title>
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --panel:#0f1a2e;
-      --text:#e7eefc;
-      --muted:#b8c6e6;
-      --brand:#1f66ff; /* blue */
-      --accent:#ff7a18; /* orange */
-      --line:rgba(231,238,252,.14);
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --radius:18px;
-      --max:1100px;
-    }
+<meta
+name="description"
+content="Integrated Services provides TV mounting, security camera installation, ethernet wiring, smart home setup, networking solutions, and handyman services throughout Phoenix and surrounding Arizona cities."
+/>
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1100px 600px at 15% -10%, rgba(31,102,255,.35), transparent 65%),
-        radial-gradient(900px 550px at 90% 10%, rgba(255,122,24,.25), transparent 60%),
-        linear-gradient(180deg, #070b14 0%, var(--bg) 60%, #070b14 100%);
-      line-height:1.5;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    a{color:inherit;text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    /* Header */
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(140%) blur(10px);
-      background:rgba(7,11,20,.55);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      height:66px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      font-weight:800; letter-spacing:.3px;
-    }
-    .mark{
-      width:38px;height:38px;border-radius:12px;
-      background:linear-gradient(135deg, var(--brand), var(--accent));
-      box-shadow: var(--shadow);
-      position:relative;
-    }
-    .mark:before{
-      content:"";
-      position:absolute; inset:9px;
-      border-radius:10px;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.18);
-    }
-    .brand span{display:inline-block}
-    .brand .name{font-size:15px}
-    .brand .name em{font-style:normal;color:var(--accent)}
+<style>
 
-    .links{display:flex; gap:18px; align-items:center}
-    .links a{
-      font-size:14px; color:var(--muted);
-      padding:10px 10px;
-      border-radius:12px;
-    }
-    .links a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+:root{
+  --bg:#0a0a0a;
+  --panel:#111111;
+  --orange:#f47c20;
+  --blue:#0d1f36;
+  --text:#f3f3f3;
+  --muted:#b7b7b7;
+  --border:rgba(255,255,255,.08);
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --radius:20px;
+  --max:1200px;
+}
 
-    .cta{
-      display:flex; gap:10px; align-items:center;
-    }
-    .btn{
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(255,255,255,.08);
-      color:var(--text);
-      padding:10px 14px;
-      border-radius:14px;
-      font-weight:700;
-      font-size:14px;
-      cursor:pointer;
-      transition: transform .06s ease, background .15s ease;
-      display:inline-flex; align-items:center; gap:10px;
-    }
-    .btn:hover{background:rgba(255,255,255,.12)}
-    .btn:active{transform:translateY(1px)}
-    .btn.primary{
-      background:linear-gradient(135deg, rgba(31,102,255,.95), rgba(255,122,24,.95));
-      border:1px solid rgba(255,255,255,.22);
-      box-shadow: var(--shadow);
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    .mobileMenuBtn{display:none}
+body{
+  font-family:'Inter',sans-serif;
+  background:
+  radial-gradient(circle at top left, rgba(244,124,32,.12), transparent 30%),
+  radial-gradient(circle at top right, rgba(13,31,54,.4), transparent 35%),
+  #0a0a0a;
+  color:var(--text);
+  overflow-x:hidden;
+}
 
-    /* Hero */
-    .hero{padding:58px 0 26px}
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    .card{
-      background:rgba(15,26,46,.72);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .heroMain{padding:28px}
-    .badge{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 10px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.06);
-      border-radius:999px;
-      color:var(--muted);
-      font-weight:700;
-      font-size:12px;
-    }
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent); box-shadow:0 0 0 4px rgba(255,122,24,.18)}
-    h1{margin:14px 0 10px; font-size:38px; line-height:1.12; letter-spacing:-.6px}
-    .sub{color:var(--muted); font-size:16px; max-width:54ch}
+html{
+  scroll-behavior:smooth;
+}
 
-    .heroActions{margin-top:18px; display:flex; flex-wrap:wrap; gap:10px}
+.container{
+  width:100%;
+  max-width:var(--max);
+  margin:auto;
+  padding:0 24px;
+}
 
-    .heroSide{padding:22px}
-    .sideTitle{margin:0; font-size:14px; color:var(--muted); font-weight:800; letter-spacing:.3px}
-    .sideList{margin:12px 0 0; padding:0; list-style:none; display:grid; gap:10px}
-    .sideList li{
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.06);
-      border-radius:14px;
-      padding:12px;
-      display:flex; gap:12px; align-items:flex-start;
-    }
-    .icon{
-      width:34px; height:34px; border-radius:12px;
-      background:rgba(31,102,255,.18);
-      border:1px solid rgba(31,102,255,.35);
-      display:grid; place-items:center;
-      flex:0 0 auto;
-    }
-    .icon.orange{background:rgba(255,122,24,.16); border-color:rgba(255,122,24,.35)}
-    .k{font-weight:800}
-    .v{color:var(--muted); font-size:13px}
+section{
+  padding:90px 0;
+}
 
-    /* Sections */
-    section{padding:28px 0}
-    .sectionHead{display:flex; align-items:end; justify-content:space-between; gap:18px; margin-bottom:14px}
-    .sectionHead h2{margin:0; font-size:22px; letter-spacing:-.2px}
-    .sectionHead p{margin:0; color:var(--muted); max-width:64ch}
+h1,h2,h3{
+  font-family:'Oswald',sans-serif;
+}
 
-    .grid3{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
-    .service{padding:16px}
-    .service h3{margin:10px 0 6px; font-size:16px}
-    .service p{margin:0; color:var(--muted); font-size:13px}
-    .tagRow{margin-top:10px; display:flex; flex-wrap:wrap; gap:8px}
-    .tag{font-size:12px; color:var(--muted); padding:6px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.05)}
+p{
+  line-height:1.7;
+  color:var(--muted);
+}
 
-    /* Quote + Booking */
-    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
-    form{display:grid; gap:10px}
-    label{font-size:12px; color:var(--muted); font-weight:800; letter-spacing:.2px}
-    input, select, textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(7,11,20,.45);
-      color:var(--text);
-      outline:none;
-    }
-    input:focus, select:focus, textarea:focus{border-color:rgba(31,102,255,.6); box-shadow:0 0 0 4px rgba(31,102,255,.18)}
-    textarea{min-height:120px; resize:vertical}
+a{
+  text-decoration:none;
+  color:inherit;
+}
 
-    .note{font-size:12px; color:var(--muted)}
-    .success, .error{
-      display:none;
-      border-radius:14px;
-      padding:12px;
-      font-size:13px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.06);
-    }
-    .success{border-color:rgba(46,204,113,.35); background:rgba(46,204,113,.10)}
-    .error{border-color:rgba(231,76,60,.35); background:rgba(231,76,60,.10)}
+.topbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+  background:rgba(10,10,10,.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
 
-    /* Portfolio */
-    .portfolioGrid{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
-    .placeholder{
-      aspect-ratio: 16 / 10;
-      border-radius:16px;
-      border:1px dashed rgba(255,255,255,.22);
-      background:rgba(255,255,255,.04);
-      display:grid; place-items:center;
-      color:var(--muted);
-      font-weight:800;
-      text-align:center;
-      padding:14px;
-    }
+.nav{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-    /* Footer */
-    footer{padding:26px 0 40px; color:var(--muted)}
-    .footerGrid{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; border-top:1px solid var(--line); padding-top:18px}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
 
-    /* Responsive */
-    @media (max-width: 940px){
-      .heroGrid{grid-template-columns: 1fr}
-      .grid3{grid-template-columns: 1fr}
-      .grid2{grid-template-columns: 1fr}
-      .portfolioGrid{grid-template-columns: 1fr}
-    }
-    @media (max-width: 780px){
-      .links{display:none}
-      .mobileMenuBtn{display:inline-flex}
-      h1{font-size:32px}
-    }
+.logo img{
+  width:52px;
+  height:52px;
+  border-radius:12px;
+}
 
-    /* Mobile menu panel */
-    .mobilePanel{
-      display:none;
-      border-top:1px solid var(--line);
-      background:rgba(7,11,20,.75);
-    }
-    .mobilePanel .container{padding:12px 18px 16px}
-    .mobilePanel a{display:block; padding:12px 10px; border-radius:12px; color:var(--muted)}
-    .mobilePanel a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-  </style>
+.logoText{
+  font-family:'Oswald',sans-serif;
+  font-size:22px;
+  font-weight:700;
+}
+
+.logoText span{
+  color:var(--orange);
+}
+
+.navLinks{
+  display:flex;
+  gap:28px;
+}
+
+.navLinks a{
+  font-weight:600;
+  color:#d5d5d5;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+  linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.88)),
+  url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  z-index:-1;
+}
+
+.heroContent{
+  max-width:760px;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(244,124,32,.12);
+  border:1px solid rgba(244,124,32,.3);
+  padding:10px 18px;
+  border-radius:999px;
+  margin-bottom:24px;
+  font-size:14px;
+  font-weight:700;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  background:var(--orange);
+  border-radius:50%;
+}
+
+.hero h1{
+  font-size:72px;
+  line-height:1;
+  margin-bottom:24px;
+}
+
+.hero p{
+  font-size:19px;
+  max-width:620px;
+  margin-bottom:36px;
+}
+
+.heroButtons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.btn{
+  padding:16px 24px;
+  border-radius:14px;
+  font-weight:700;
+  transition:.2s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.btnPrimary{
+  background:var(--orange);
+  color:white;
+}
+
+.btnPrimary:hover{
+  background:#ff8f37;
+  transform:translateY(-2px);
+}
+
+.btnSecondary{
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.05);
+}
+
+.sectionTitle{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.sectionTitle h2{
+  font-size:48px;
+  margin-bottom:12px;
+}
+
+.servicesGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
+
+.serviceCard{
+  background:#151515;
+  border:1px solid var(--border);
+  padding:34px;
+  border-radius:20px;
+  transition:.25s;
+}
+
+.serviceCard:hover{
+  transform:translateY(-6px);
+  border-color:rgba(244,124,32,.35);
+}
+
+.serviceIcon{
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+.serviceCard h3{
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.trust{
+  background:#101010;
+}
+
+.trustGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+.trustCard{
+  background:#171717;
+  border:1px solid var(--border);
+  padding:28px;
+  border-radius:18px;
+}
+
+.trustCard h3{
+  color:var(--orange);
+  margin-bottom:10px;
+}
+
+.ctaSection{
+  text-align:center;
+}
+
+.ctaBox{
+  background:
+  linear-gradient(135deg, rgba(13,31,54,.95), rgba(0,0,0,.95));
+  padding:60px 40px;
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.ctaBox h2{
+  font-size:54px;
+  margin-bottom:18px;
+}
+
+.ctaBox p{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:30px;
+}
+
+.footer{
+  padding:50px 0;
+  border-top:1px solid var(--border);
+}
+
+.footerGrid{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.mobileBar{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#111;
+  border-top:1px solid rgba(255,255,255,.08);
+  display:none;
+  z-index:999;
+}
+
+.mobileBarInner{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+}
+
+.mobileBar a{
+  padding:18px 10px;
+  text-align:center;
+  font-size:14px;
+  font-weight:700;
+}
+
+.mobileBar a:nth-child(2){
+  background:var(--orange);
+}
+
+@media(max-width:900px){
+
+.hero h1{
+  font-size:52px;
+}
+
+.navLinks{
+  display:none;
+}
+
+.sectionTitle h2{
+  font-size:38px;
+}
+
+}
+
+@media(max-width:700px){
+
+.hero{
+  padding-top:120px;
+}
+
+.hero h1{
+  font-size:42px;
+}
+
+.hero p{
+  font-size:17px;
+}
+
+.mobileBar{
+  display:block;
+}
+
+body{
+  padding-bottom:80px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="#top" aria-label="Integrated Services">
-          <div class="mark" aria-hidden="true"></div>
-          <div class="name"><span>INTEGRATED</span> <em>SERVICES</em></div>
-        </a>
 
-        <nav class="links" aria-label="Primary navigation">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#quote">Quotes</a>
-          <a href="#booking">Booking</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<header class="topbar">
 
-        <div class="cta">
-          <a class="btn" href="#quote">Request a Quote</a>
-          <a class="btn primary" href="#booking">Book Service</a>
-          <button class="btn mobileMenuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
-        </div>
-      </div>
-    </div>
+<div class="container nav">
 
-    <div class="mobilePanel" id="mobilePanel">
-      <div class="container">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#quote">Quotes</a>
-        <a href="#booking">Booking</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </header>
+<div class="logo">
+<img src="logo.png" alt="Integrated Services Logo">
 
-  <main id="top">
-    <div class="container">
-      <section class="hero">
-        <div class="heroGrid">
-          <div class="card heroMain">
-            <div class="badge"><span class="dot"></span> Cabling • Security • Handyman — Local & Reliable</div>
-            <h1>Professional installs and repairs that look clean and work right.</h1>
-            <p class="sub">
-              Integrated Services delivers structured cabling, security camera installs, TV mounting, network setup, and dependable handyman work.
-              Request a quote or book a service window online.
-            </p>
-            <div class="heroActions">
-              <a class="btn primary" href="#quote">Get a Quote</a>
-              <a class="btn" href="#booking">Book a Time</a>
-              <a class="btn" href="#services">View Services</a>
-            </div>
-            <p class="note" style="margin-top:14px">
-              Service area and licensing/insurance statements can be added in the About section.
-            </p>
-          </div>
+<div class="logoText">
+INTEGRATED <span>SERVICES</span>
+</div>
+</div>
 
-          <aside class="card heroSide">
-            <p class="sideTitle">Popular Requests</p>
-            <ul class="sideList">
-              <li>
-                <div class="icon" aria-hidden="true">🔌</div>
-                <div>
-                  <div class="k">Structured Cabling</div>
-                  <div class="v">Cat6/Cat6A runs, patch panels, drops, labeling, tidy pathways.</div>
-                </div>
-              </li>
-              <li>
-                <div class="icon orange" aria-hidden="true">📷</div>
-                <div>
-                  <div class="k">Security Cameras</div>
-                  <div class="v">Mounting, wiring, PoE/NVR setup, clean cable management.</div>
-                </div>
-              </li>
-              <li>
-                <div class="icon" aria-hidden="true">📺</div>
-                <div>
-                  <div class="k">TV Mount + Network</div>
-                  <div class="v">Concealed cables, Wi‑Fi optimization, device setup.</div>
-                </div>
-              </li>
-              <li>
-                <div class="icon orange" aria-hidden="true">🛠️</div>
-                <div>
-                  <div class="k">Handyman Work</div>
-                  <div class="v">Repairs, installs, hang/assemble, punch-list completion.</div>
-                </div>
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </section>
+<div class="navLinks">
+<a href="#services">Services</a>
+<a href="#why">Why Us</a>
+<a href="#contact">Contact</a>
+</div>
 
-      <section id="services">
-        <div class="sectionHead">
-          <div>
-            <h2>Services</h2>
-            <p>Clear scope, clean workmanship, and solid documentation when needed (labels, photos, and simple diagrams).</p>
-          </div>
-        </div>
+</div>
 
-        <div class="grid3">
-          <div class="card service">
-            <div class="icon" aria-hidden="true">🔌</div>
-            <h3>Structured Cabling</h3>
-            <p>Runs, drops, patch panels, keystones, conduit pathways, and cleanup for homes and small businesses.</p>
-            <div class="tagRow">
-              <span class="tag">Cat6/Cat6A</span>
-              <span class="tag">Labeling</span>
-              <span class="tag">Cable management</span>
-            </div>
-          </div>
+</header>
 
-          <div class="card service">
-            <div class="icon orange" aria-hidden="true">📷</div>
-            <h3>Security Systems</h3>
-            <p>Camera mounting, PoE wiring, NVR setup, and system handoff with basic training.</p>
-            <div class="tagRow">
-              <span class="tag">PoE</span>
-              <span class="tag">NVR/DVR</span>
-              <span class="tag">Clean installs</span>
-            </div>
-          </div>
+<section class="hero">
 
-          <div class="card service">
-            <div class="icon" aria-hidden="true">📡</div>
-            <h3>Network Setup</h3>
-            <p>Router/modem swaps, Wi‑Fi tuning, mesh installs, switch setup, and device connectivity.</p>
-            <div class="tagRow">
-              <span class="tag">Wi‑Fi optimization</span>
-              <span class="tag">Mesh</span>
-              <span class="tag">Switches</span>
-            </div>
-          </div>
+<div class="container heroContent">
 
-          <div class="card service">
-            <div class="icon orange" aria-hidden="true">📺</div>
-            <h3>TV Mounting</h3>
-            <p>Wall mounting, soundbar mounting, concealed cable routing, and device hookup.</p>
-            <div class="tagRow">
-              <span class="tag">Stud find</span>
-              <span class="tag">Conceal cables</span>
-              <span class="tag">Clean finish</span>
-            </div>
-          </div>
+<div class="badge">
+<div class="dot"></div>
+Phoenix Smart Home & Handyman Services
+</div>
 
-          <div class="card service">
-            <div class="icon" aria-hidden="true">🔧</div>
-            <h3>Handyman Services</h3>
-            <p>Repairs, installs, shelves, hardware, doors, fixtures, and punch‑list items.</p>
-            <div class="tagRow">
-              <span class="tag">Repairs</span>
-              <span class="tag">Assembly</span>
-              <span class="tag">Home fixes</span>
-            </div>
-          </div>
+<h1>
+Built Right.<br>
+Clean Installs.<br>
+Reliable Service.
+</h1>
 
-          <div class="card service">
-            <div class="icon orange" aria-hidden="true">✅</div>
-            <h3>Small Business Support</h3>
-            <p>On‑site troubleshooting, cable cleanup, basic IT support, and site readiness.</p>
-            <div class="tagRow">
-              <span class="tag">On‑site</span>
-              <span class="tag">Documentation</span>
-              <span class="tag">Fast response</span>
-            </div>
-          </div>
-        </div>
-      </section>
+<p>
+Integrated Services provides TV mounting, security camera installation,
+ethernet wiring, smart home setup, networking solutions,
+and handyman services throughout Phoenix and surrounding Arizona cities.
+</p>
 
-      <section id="about">
-        <div class="sectionHead">
-          <div>
-            <h2>About Integrated Services</h2>
-            <p>
-              Integrated Services is an Arizona-based provider of structured cabling, security camera installation, network setup, TV mounting, and dependable handyman services. With over 7 years of experience—including large enterprise environments supporting multiple companies and their customers—we bring professional standards, clean workmanship, and reliable results to every job.
-            </p>
-          </div>
-        </div>
+<div class="heroButtons">
 
-        <div class="grid2">
-          <div class="card" style="padding:16px">
-            <h3 style="margin:0 0 8px">Our Background</h3>
-            <p class="note" style="margin:0">
-              • Self-taught and certified<br/>
-              • 7+ years of hands-on experience<br/>
-              • Large enterprise and multi-client support experience<br/>
-              • Strong focus on customer service and communication
-            </p>
-          </div>
-          <div class="card" style="padding:16px">
-            <h3 style="margin:0 0 8px">Why Choose Us</h3>
-            <p class="note" style="margin:0">
-              We take pride in clean installs, organized cable management, and doing the job right the first time. From residential projects to small business support, Integrated Services delivers professional results you can trust.
-            </p>
-          </div>
-        </div>
-      </section>
+<a href="#contact" class="btn btnPrimary">
+Get Free Estimate
+</a>
 
-      <section id="quote">
-        <div class="sectionHead">
-          <div>
-            <h2>Request a Quote</h2>
-            <p>
-              This form can send requests to your email using a provider (Formspree) or Netlify Forms. Instructions are below.
-            </p>
-          </div>
-        </div>
+<a href="tel:+14805820190" class="btn btnSecondary">
+Call Now
+</a>
 
-        <div class="grid2">
-          <div class="card" style="padding:16px">
-            <!--
-              OPTION A (Recommended): Netlify Forms
-              - Works when deployed on Netlify.
-              - Keep the form exactly as-is and deploy to Netlify.
+</div>
 
-              OPTION B: Formspree
-              - Replace action with your Formspree endpoint.
-              - Example: action="https://formspree.io/f/xxxxxx"
-            -->
-            <form id="quoteForm" name="quote" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="quote" />
+</div>
 
-              <div>
-                <label for="q_name">Name</label>
-                <input id="q_name" name="name" autocomplete="name" required />
-              </div>
+</section>
 
-              <div>
-                <label for="q_phone">Phone</label>
-                <input id="q_phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(602) 555-1234" required />
-              </div>
+<section id="services">
 
-              <div>
-                <label for="q_email">Email</label>
-                <input id="q_email" name="email" type="email" autocomplete="email" placeholder="you@email.com" />
-              </div>
+<div class="container">
 
-              <div>
-                <label for="q_service">Service Type</label>
-                <select id="q_service" name="service" required>
-                  <option value="" selected disabled>Select one…</option>
-                  <option>Structured Cabling</option>
-                  <option>Security Cameras</option>
-                  <option>Network Setup</option>
-                  <option>TV Mounting</option>
-                  <option>Handyman Work</option>
-                  <option>Small Business Support</option>
-                </select>
-              </div>
+<div class="sectionTitle">
+<h2>Our Services</h2>
 
-              <div>
-                <label for="q_address">Job Location (City/Area)</label>
-                <input id="q_address" name="location" placeholder="City / Neighborhood" required />
-              </div>
+<p>
+Professional installation and handyman solutions for homes and businesses.
+</p>
+</div>
 
-              <div>
-                <label for="q_details">Project Details</label>
-                <textarea id="q_details" name="details" placeholder="Describe what you need (how many drops/cameras, wall type, existing equipment, timeline, etc.)" required></textarea>
-              </div>
+<div class="servicesGrid">
 
-              <div>
-                <label for="q_time">Preferred Schedule</label>
-                <input id="q_time" name="preferred_time" placeholder="Example: Weekdays after 4pm / Saturday morning" />
-              </div>
+<div class="serviceCard">
+<div class="serviceIcon">📺</div>
+<h3>TV Mounting</h3>
+<p>Professional TV mounting with clean cable concealment and device setup.</p>
+</div>
 
-              <button class="btn primary" type="submit">Submit Quote Request</button>
+<div class="serviceCard">
+<div class="serviceIcon">📷</div>
+<h3>Security Cameras</h3>
+<p>Home and small business security camera installation with smart app setup.</p>
+</div>
 
-              <div class="success" id="quoteSuccess">Thanks—your request was submitted. We’ll get back to you shortly.</div>
-              <div class="error" id="quoteError">Something went wrong. Please try again or use the contact info below.</div>
+<div class="serviceCard">
+<div class="serviceIcon">🌐</div>
+<h3>Ethernet Wiring</h3>
+<p>Cat6 and networking installation with clean cable management and routing.</p>
+</div>
 
-              <p class="note" style="margin:0">
-                Tip: For faster quotes, include photos and measurements in the details.
-              </p>
-            </form>
-          </div>
+<div class="serviceCard">
+<div class="serviceIcon">🏠</div>
+<h3>Smart Home Setup</h3>
+<p>Doorbells, smart locks, WiFi systems, smart lighting, and device integration.</p>
+</div>
 
-          <div class="card" style="padding:16px">
-            <h3 style="margin:0 0 8px">Fast Quote Checklist</h3>
-            <p class="note" style="margin:0 0 10px">
-              Include these details to speed things up:
-            </p>
-            <ul class="note" style="margin:0; padding-left:18px">
-              <li>How many runs/drops or cameras?</li>
-              <li>Wall type: drywall, block, stucco, drop ceiling?</li>
-              <li>Distance (approx.) and pathway options (attic/soffit/conduit)?</li>
-              <li>Equipment you already have (router, NVR, cameras)?</li>
-              <li>Preferred date/time window</li>
-            </ul>
-            <div style="height:12px"></div>
-            <a class="btn" href="#contact">Contact Info</a>
-          </div>
-        </div>
-      </section>
+<div class="serviceCard">
+<div class="serviceIcon">🛠️</div>
+<h3>Handyman Services</h3>
+<p>Repairs, installs, furniture assembly, mounting, and home improvement projects.</p>
+</div>
 
-      <section id="booking">
-        <div class="sectionHead">
-          <div>
-            <h2>Book Service</h2>
-            <p>
-              Use a booking link (Calendly) or a simple request form. This section is ready for either approach.
-            </p>
-          </div>
-        </div>
+<div class="serviceCard">
+<div class="serviceIcon">⚡</div>
+<h3>Network Setup</h3>
+<p>Router setup, mesh systems, WiFi optimization, and connectivity troubleshooting.</p>
+</div>
 
-        <div class="grid2">
-          <div class="card" style="padding:16px">
-            <h3 style="margin:0 0 8px">Option 1: Booking Link (Recommended)</h3>
-            <p class="note" style="margin:0 0 12px">
-              Replace the button link below with your Calendly (or other scheduler) URL.
-            </p>
-            <a class="btn primary" href="https://calendly.com/integrated-services/phone-call" target="_blank" rel="noreferrer">Schedule a Phone Call</a>
-            <p class="note" style="margin:12px 0 0">
-              If you want an embedded calendar on the page, you can add Calendly’s embed snippet here.
-            </p>
-          </div>
+</div>
 
-          <div class="card" style="padding:16px">
-            <h3 style="margin:0 0 8px">Option 2: Booking Request</h3>
-            <p class="note" style="margin:0 0 12px">
-              Visitors can request a service window, and you confirm by text/call.
-            </p>
+</div>
 
-            <form id="bookForm" name="booking" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="booking" />
+</section>
 
-              <div>
-                <label for="b_name">Name</label>
-                <input id="b_name" name="name" required />
-              </div>
+<section class="trust" id="why">
 
-              <div>
-                <label for="b_phone">Phone</label>
-                <input id="b_phone" name="phone" required />
-              </div>
+<div class="container">
 
-              <div>
-                <label for="b_window">Requested Time Window</label>
-                <input id="b_window" name="window" placeholder="Example: Saturday 10am–1pm" required />
-              </div>
+<div class="sectionTitle">
 
-              <div>
-                <label for="b_notes">Notes</label>
-                <textarea id="b_notes" name="notes" placeholder="What are we doing at the appointment?" required></textarea>
-              </div>
+<h2>Why Choose Integrated Services</h2>
 
-              <button class="btn" type="submit">Request Booking</button>
+<p>
+Professional standards with modern installation expertise.
+</p>
 
-              <div class="success" id="bookSuccess">Request submitted. We’ll confirm by text or call.</div>
-              <div class="error" id="bookError">Something went wrong. Please try again or use the contact info below.</div>
-            </form>
-          </div>
-        </div>
-      </section>
+</div>
 
-      <section id="portfolio">
-        <div class="sectionHead">
-          <div>
-            <h2>Portfolio (Coming Soon)</h2>
-            <p>
-              When you’re ready, this becomes a gallery of before/after photos, short project notes, and customer testimonials.
-            </p>
-          </div>
-        </div>
+<div class="trustGrid">
 
-        <div class="portfolioGrid">
-          <div class="placeholder">Add project photos<br/>and descriptions here</div>
-          <div class="placeholder">Structured cabling<br/>cleanups</div>
-          <div class="placeholder">Camera installs<br/>with clean pathways</div>
-        </div>
-      </section>
+<div class="trustCard">
+<h3>Clean Workmanship</h3>
+<p>We focus on organized installs, proper cable management, and professional results.</p>
+</div>
 
-      <section id="contact">
-        <div class="sectionHead">
-          <div>
-            <h2>Contact</h2>
-            <p>Replace the placeholders with your real business phone/email and service area.</p>
-          </div>
-        </div>
+<div class="trustCard">
+<h3>Modern Technical Experience</h3>
+<p>Networking, structured cabling, smart home, and installation experience.</p>
+</div>
 
-        <div class="grid2">
-          <div class="card" style="padding:16px">
-            <h3 style="margin:0 0 8px">Reach us</h3>
-            <p class="note" style="margin:0">
-              Phone: <a href="tel:+14805820190">(480) 582-0190</a><br/>
-              Email: <a href="mailto:integratedservices18@gmail.com">integratedservices18@gmail.com</a><br/>
-              Service Area: Arizona
-            </p>
-            <div style="height:12px"></div>
-            <a class="btn" href="#quote">Request a Quote</a>
-          </div>
+<div class="trustCard">
+<h3>Fast Communication</h3>
+<p>Quick response times through text and phone support.</p>
+</div>
 
-          <div class="card" style="padding:16px">
-            <h3 style="margin:0 0 8px">Business hours</h3>
-            <p class="note" style="margin:0">
-              Sunday–Tuesday: 6:00am–6:00pm<br/>
-              Other days: by appointment
-            </p>
-            <div style="height:12px"></div>
-            <p class="note" style="margin:0">
-              <strong>Note:</strong> Only list licensing/insurance if accurate for your location.
-            </p>
-          </div>
-        </div>
-      </section>
+<div class="trustCard">
+<h3>Local Arizona Service</h3>
+<p>Proudly serving Phoenix, Glendale, Peoria, Surprise, El Mirage, and nearby cities.</p>
+</div>
 
-      <footer>
-        <div class="footerGrid">
-          <div>© <span id="year"></span> Integrated Services. All rights reserved.</div>
-          <div style="display:flex; gap:14px; flex-wrap:wrap">
-            <a href="#services">Services</a>
-            <a href="#quote">Quotes</a>
-            <a href="#booking">Booking</a>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </main>
+</div>
 
-  <script>
-    // Mobile menu
-    const menuBtn = document.getElementById('menuBtn');
-    const mobilePanel = document.getElementById('mobilePanel');
+</div>
 
-    if (menuBtn) {
-      menuBtn.addEventListener('click', () => {
-        const open = mobilePanel.style.display === 'block';
-        mobilePanel.style.display = open ? 'none' : 'block';
-        menuBtn.setAttribute('aria-expanded', String(!open));
-      });
+</section>
 
-      // Close menu after clicking a link
-      mobilePanel.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          mobilePanel.style.display = 'none';
-          menuBtn.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
+<section class="ctaSection" id="contact">
 
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+<div class="container">
 
-    // NOTE: Netlify handles form submits automatically.
-    // The handlers below only show success messages when running locally.
-    function attachLocalSubmitHandler(formId, successId, errorId) {
-      const form = document.getElementById(formId);
-      const ok = document.getElementById(successId);
-      const bad = document.getElementById(errorId);
-      if (!form) return;
+<div class="ctaBox">
 
-      form.addEventListener('submit', async (e) => {
-        // If the form is actually hosted (Netlify), let it submit normally.
-        // If running locally, prevent default and show a friendly message.
-        const isLocal = location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-        if (!isLocal) return;
+<h2>Get Your Free Estimate Today</h2>
 
-        e.preventDefault();
-        ok.style.display = 'block';
-        bad.style.display = 'none';
-        form.reset();
-      });
-    }
+<p>
+Need TV mounting, security cameras, ethernet wiring,
+networking setup, or handyman services?
+Contact Integrated Services today for fast professional support.
+</p>
 
-    attachLocalSubmitHandler('quoteForm', 'quoteSuccess', 'quoteError');
-    attachLocalSubmitHandler('bookForm', 'bookSuccess', 'bookError');
-  </script>
+<div class="heroButtons" style="justify-content:center">
+
+<a href="tel:+14805820190" class="btn btnPrimary">
+Call (480) 582-0190
+</a>
+
+<a href="sms:+14805820190" class="btn btnSecondary">
+Text Us
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="container footerGrid">
+
+<div>
+
+<div class="logoText">
+INTEGRATED <span>SERVICES</span>
+</div>
+
+<p style="margin-top:12px; max-width:420px;">
+Modern smart home, networking, and handyman solutions for Arizona homes and businesses.
+</p>
+
+</div>
+
+<div>
+
+<p><strong>Phone:</strong> (480) 582-0190</p>
+<p><strong>Email:</strong> integratedservices18@gmail.com</p>
+<p><strong>Service Area:</strong> Phoenix, AZ & Surrounding Cities</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<div class="mobileBar">
+
+<div class="mobileBarInner">
+
+<a href="tel:+14805820190">Call</a>
+<a href="#contact">Quote</a>
+<a href="sms:+14805820190">Text</a>
+
+</div>
+
+</div>
+
 </body>
 </html>
