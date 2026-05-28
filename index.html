@@ -15,9 +15,8 @@
 
 :root{
 --bg:#0a0a0a;
---panel:#111111;
+--panel:#151515;
 --orange:#f47c20;
---blue:#0d1f36;
 --text:#f3f3f3;
 --muted:#b7b7b7;
 --border:rgba(255,255,255,.08);
@@ -29,15 +28,15 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Inter',sans-serif;
 background:#0a0a0a;
 color:var(--text);
 overflow-x:hidden;
-}
-
-html{
-scroll-behavior:smooth;
 }
 
 .container{
@@ -122,7 +121,7 @@ content:'';
 position:absolute;
 inset:0;
 background:
-linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.88)),
 url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
@@ -215,10 +214,10 @@ gap:24px;
 }
 
 .serviceCard{
-background:#151515;
+background:var(--panel);
 padding:34px;
 border-radius:20px;
-border:1px solid rgba(255,255,255,.08);
+border:1px solid var(--border);
 transition:.25s;
 }
 
@@ -419,11 +418,13 @@ Call Now
 <div class="container">
 
 <div class="sectionTitle">
+
 <h2>Our Services</h2>
 
 <p>
 Professional installation and handyman solutions for homes and businesses.
 </p>
+
 </div>
 
 <div class="servicesGrid">
@@ -489,22 +490,22 @@ Tell us about your project and we'll get back to you quickly.
 <form action="https://formspree.io/f/xredrlvq" method="POST">
 
 <input 
-type="text" 
-name="name" 
+type="text"
+name="name"
 placeholder="Your Name"
 required
 >
 
 <input 
-type="tel" 
-name="phone" 
+type="tel"
+name="phone"
 placeholder="Phone Number"
 required
 >
 
 <input 
-type="email" 
-name="email" 
+type="email"
+name="email"
 placeholder="Email Address"
 >
 
@@ -521,7 +522,7 @@ placeholder="Email Address"
 
 </select>
 
-<textarea 
+<textarea
 name="message"
 placeholder="Tell us about your project..."
 required
